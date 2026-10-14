@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anteprima - Black Friday Ditano 2026</title>
+<style>
+  :root{
+    --nero:#1a1a1a;--bordeaux:#9D003C;--bordeaux-sc:#7d0030;
+    --terra:#F5DEC4;--cielo:#CCD8E6;--grigio:#E4E2DD;--bianco:#fff;--linea:#e7e1d8;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Alexandria',system-ui,-apple-system,sans-serif;color:var(--nero);background:#fbf8f4;}
+  .toolbar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--linea);padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:13px;}
+  .toolbar label{color:#6a5f54;}
+  .toolbar input[type=date]{background:#fff;border:1px solid var(--linea);color:var(--nero);border-radius:7px;padding:6px 10px;font:inherit;}
+  .toolbar button{background:var(--bordeaux);border:none;color:#fff;border-radius:7px;padding:7px 14px;font:inherit;font-weight:600;cursor:pointer;}
+  .toolbar .hint{color:#9a8c7c;font-size:12px;}
+
+  #bf *{box-sizing:border-box;}
+  #bf [hidden]{display:none !important;}
+  .bf__banner{background:var(--nero);color:#fff;text-align:center;padding:clamp(40px,6vw,78px) 20px clamp(30px,4vw,46px);position:relative;}
+  .bf__banner::after{content:"";display:block;width:46px;height:2px;background:var(--bordeaux);margin:22px auto 0;}
+  .bf__banner-kick{display:inline-block;font-size:clamp(10px,1.5vw,12px);letter-spacing:.26em;text-transform:uppercase;color:#e8a9bf;font-weight:600;margin:0 0 16px;}
+  .bf__banner-title{font-family:'Garamond Premier Pro',Georgia,serif;font-size:clamp(32px,6.5vw,62px);line-height:1.06;margin:0;font-weight:500;color:#fff;}
+  .bf__banner-sub{margin:16px auto 0;max-width:640px;font-size:clamp(13px,1.8vw,16px);line-height:1.68;color:#c9c2bb;}
+  .bf__board{background:var(--bianco);padding:clamp(32px,4vw,64px) clamp(16px,4vw,56px) clamp(48px,7vw,84px);}
+  .bf__wrap{max-width:1120px;margin:0 auto;}
+  .bf__hero{position:relative;background:var(--bianco);border:1px solid var(--linea);border-radius:4px;overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;box-shadow:0 24px 60px -34px rgba(60,40,30,.4);}
+  @media(max-width:760px){.bf__hero{grid-template-columns:1fr;}}
+  .bf__hero-media{position:relative;min-height:320px;background:var(--grigio);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .bf__hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .bf__hero-media--empty{background:linear-gradient(160deg,var(--terra),var(--cielo));}
+  .bf__hero-badge{position:absolute;top:18px;left:18px;z-index:3;display:inline-flex;align-items:center;gap:7px;background:var(--bordeaux);color:#fff;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:7px 14px;border-radius:30px;}
+  .bf__hero-badge .dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:bfPulse 1.6s infinite;}
+  @keyframes bfPulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  .bf__hero-body{padding:clamp(28px,3.5vw,50px);display:flex;flex-direction:column;justify-content:center;}
+  .bf__hero-period{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bordeaux);font-weight:600;margin:0 0 12px;}
+  .bf__hero-title{font-family:'Garamond Premier Pro',Georgia,serif;color:var(--nero);font-size:clamp(26px,4vw,40px);line-height:1.14;margin:0 0 14px;font-weight:500;}
+  .bf__hero-prod{font-size:14px;color:#777;margin:0 0 14px;}
+  .bf__hero-prod b{color:var(--bordeaux);font-weight:600;}
+  .bf__hero-desc{font-size:15px;line-height:1.68;color:#5c5349;margin:0 0 24px;}
+  .bf__count{display:flex;gap:10px;margin:0 0 24px;}
+  .bf__count-box{background:var(--nero);border:1px solid var(--nero);border-radius:6px;padding:10px 14px;text-align:center;min-width:60px;}
+  .bf__count-n{font-family:'Garamond Premier Pro',Georgia,serif;font-size:clamp(22px,3vw,30px);color:#fff;line-height:1;display:block;}
+  .bf__count-l{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#b3a99c;margin-top:5px;display:block;}
+  .bf__code{border:1px dashed var(--bordeaux);border-radius:8px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px;background:rgba(157,0,60,.045);}
+  .bf__code-lab{font-size:9.5px;text-transform:uppercase;letter-spacing:.14em;color:#999;display:block;margin-bottom:3px;text-align:left;}
+  .bf__code-val{font-family:'Garamond Premier Pro',Georgia,serif;font-size:clamp(19px,3vw,25px);font-weight:600;letter-spacing:.06em;color:var(--bordeaux);}
+  .bf__code-btn{border:none;background:var(--bordeaux);color:#fff;padding:10px 18px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:inherit;}
+  .bf__code-btn.is-copied{background:#2e7d32;}
+  .bf__cta{display:inline-block;text-align:center;background:var(--bordeaux);color:#fff;text-decoration:none;padding:15px 22px;border-radius:6px;font-weight:600;font-size:15px;letter-spacing:.02em;}
+  .bf__hero--none{grid-template-columns:1fr;text-align:center;background:linear-gradient(160deg,var(--terra),var(--cielo));}
+  .bf__hero--none .bf__hero-body{align-items:center;padding:clamp(44px,6vw,74px) 24px;}
+  .bf__hero-none-title{font-family:'Garamond Premier Pro',Georgia,serif;font-size:clamp(24px,4vw,36px);color:var(--nero);margin:0 0 10px;font-weight:500;}
+  .bf__hero-none-sub{font-size:15px;color:#6a5f54;margin:0;max-width:460px;}
+  .bf__strip-h{margin:clamp(32px,4vw,48px) 0 16px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#9a8c7c;font-weight:600;}
+  .bf__strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;}
+  .bf__slot{position:relative;background:var(--bianco);border:1px solid var(--linea);border-radius:4px;padding:16px 15px;min-height:112px;display:flex;flex-direction:column;gap:6px;transition:border-color .2s,transform .2s,box-shadow .2s;}
+  .bf__slot-dates{font-size:11px;letter-spacing:.04em;color:#9a8c7c;}
+  .bf__slot-name{font-family:'Garamond Premier Pro',Georgia,serif;font-size:16px;line-height:1.2;color:var(--nero);}
+  .bf__slot-tag{margin-top:auto;font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;}
+  .bf__slot--active{border-color:var(--bordeaux);background:#fdfbf9;cursor:pointer;box-shadow:0 10px 24px -16px rgba(157,0,60,.5);}
+  .bf__slot--active:hover{transform:translateY(-3px);}
+  .bf__slot--active .bf__slot-tag{color:var(--bordeaux);}
+  .bf__slot--past{opacity:.45;}
+  .bf__slot--past .bf__slot-tag{color:#9a8c7c;}
+  .bf__slot--future{background:var(--grigio);border-style:dashed;}
+  .bf__slot--future .bf__slot-name{color:#b3a99c;}
+  .bf__slot--future .bf__slot-tag{color:var(--bordeaux);opacity:.7;}
+  .bf__lock{position:absolute;top:14px;right:14px;width:14px;height:14px;opacity:.4;color:#9a8c7c;}
+  .bf__modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(26,26,26,.5);}
+  .bf__modal.is-open{display:flex;}
+  .bf__card{background:var(--bianco);border-top:3px solid var(--bordeaux);border-radius:8px;max-width:460px;width:100%;padding:clamp(26px,4vw,42px);text-align:center;position:relative;color:var(--nero);max-height:90vh;overflow-y:auto;}
+  .bf__close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--nero);opacity:.5;}
+  .bf__card-period{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--bordeaux);font-weight:600;margin:0 0 10px;}
+  .bf__card-title{font-family:'Garamond Premier Pro',Georgia,serif;font-size:clamp(22px,4vw,30px);color:var(--nero);margin:0 0 12px;line-height:1.16;font-weight:500;}
+  .bf__card-img{width:100%;border-radius:6px;margin:0 0 16px;display:block;}
+  .bf__card-desc{font-size:15px;line-height:1.64;color:#5c5349;margin:0 0 22px;}
+
+  /* ===== HEADER / FOOTER DITANO (demo preview) ===== */
+  .dt-announce{background:#111;color:#fff;font-size:12px;text-align:center;padding:8px 16px;letter-spacing:.03em;}
+  .dt-announce span{margin:0 14px;opacity:.9;}
+  .dt-header{background:#fff;color:#111;border-bottom:1px solid #eee;}
+  .dt-header-top{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:18px 24px;gap:20px;}
+  .dt-logo{font-family:'Garamond Premier Pro',Georgia,serif;font-size:30px;font-weight:600;letter-spacing:.14em;color:#111;text-decoration:none;}
+  .dt-search{flex:1;max-width:460px;border:1px solid #ddd;border-radius:30px;padding:9px 18px;color:#999;font-size:13px;}
+  .dt-icons{display:flex;gap:18px;color:#111;font-size:13px;}
+  .dt-nav{border-top:1px solid #f0f0f0;}
+  .dt-nav ul{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;max-width:1200px;margin:0 auto;padding:12px 24px;list-style:none;}
+  .dt-nav a{color:#1d1d1d;text-decoration:none;font-size:13px;letter-spacing:.06em;text-transform:uppercase;}
+  .dt-nav a.promo{color:#C8102E;font-weight:600;}
+  .dt-nav a:hover{color:#C8102E;}
+  @media(max-width:760px){.dt-search{display:none;}.dt-nav ul{gap:14px;font-size:11px;}}
+
+  .dt-footer{background:#fff;color:#333;border-top:1px solid #eee;padding:44px 24px 20px;}
+  .dt-footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:30px;max-width:1200px;margin:0 auto 30px;}
+  .dt-footer-cols h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#111;margin:0 0 14px;}
+  .dt-footer-cols ul{list-style:none;margin:0;padding:0;}
+  .dt-footer-cols li{margin:0 0 9px;}
+  .dt-footer-cols a{color:#666;text-decoration:none;font-size:13px;}
+  .dt-footer-cols a:hover{color:#C8102E;}
+  .dt-footer-service{font-size:13px;color:#555;line-height:1.7;}
+  .dt-footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid #eee;padding-top:18px;font-size:11px;color:#999;line-height:1.6;}
+  .dt-pay{margin:14px 0;display:flex;flex-wrap:wrap;gap:8px;}
+  .dt-pay span{border:1px solid #e4e4e4;border-radius:5px;padding:3px 9px;font-size:10px;color:#888;}</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <label>Simula data:</label>
+  <input type="date" id="simDate" value="2026-11-15" min="2026-10-20" max="2026-12-10">
+  <button id="apply">Vai</button>
+  <span class="hint">Prova 2026-11-02 (prima), 2026-11-15 (slot 2 attivo), 2026-12-01 (tutto concluso). I futuri non svelano nome/codice (gate server simulato).</span>
+</div>
+
+<div class="dt-announce">
+  <span>Campioni Omaggio</span><span>Spedizione Gratuita da 50&euro;</span><span>Consegna entro 2/3 giorni</span><span>Reso Facile</span>
+</div>
+<header class="dt-header">
+  <div class="dt-header-top">
+    <a class="dt-logo" href="https://ditano.com">DITANO</a>
+    <div class="dt-search">Cerca qui i prodotti</div>
+    <div class="dt-icons"><span>Accedi</span><span>Wishlist</span><span>Carrello</span></div>
+  </div>
+  <nav class="dt-nav">
+    <ul>
+      <li><a class="promo" href="https://ditano.com/pages/promozioni-e-omaggi">Promo</a></li>
+      <li><a href="https://ditano.com/collections/novita">Novit&agrave;</a></li>
+      <li><a href="https://ditano.com/collections/profumi">Profumi</a></li>
+      <li><a href="https://ditano.com/collections/profumi-di-nicchia">Fragranze di Nicchia</a></li>
+      <li><a href="https://ditano.com/collections/make-up">Make-Up</a></li>
+      <li><a href="https://ditano.com/collections/trattamenti-tutti">Trattamenti</a></li>
+      <li><a href="https://ditano.com/collections/trattamento-uomo">Uomo</a></li>
+      <li><a href="https://ditano.com/collections/capelli">Capelli</a></li>
+      <li><a href="https://ditano.com/collections/solari">Solari</a></li>
+      <li><a href="https://ditano.com/pages/marchi">Marchi</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="bf" data-anno="2026" data-mese="11">
+  <div class="bf__banner">
+    <span class="bf__banner-kick">Black Friday Ditano 2026</span>
+    <h2 class="bf__banner-title">Ogni settimana, una scelta di bellezza</h2>
+    <p class="bf__banner-sub">Dal 3 al 30 novembre selezioniamo per te, un momento alla volta: ogni finestra apre una proposta curata, da cogliere finche' resta aperta.</p>
+  </div>
+  <div class="bf__board">
+    <div class="bf__wrap">
+      <div class="bf__hero bf__hero--none" id="bf-hero">
+        <div class="bf__hero-body">
+          <p class="bf__hero-none-title">La prima proposta sta per aprirsi</p>
+          <p class="bf__hero-none-sub">Torna presto: la nostra selezione di novembre si rivela un momento alla volta.</p>
+        </div>
+      </div>
+      <p class="bf__strip-h">Il percorso del mese</p>
+      <div class="bf__strip" id="bf-strip"></div>
+    </div>
+  </div>
+  <div class="bf__modal" id="bf-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="bf__card">
+      <button class="bf__close" aria-label="Chiudi">&times;</button>
+      <p class="bf__card-period"></p>
+      <img class="bf__card-img" alt="" hidden>
+      <h3 class="bf__card-title"></h3>
+      <p class="bf__card-desc"></p>
+      <div class="bf__code" hidden><span><span class="bf__code-lab">Il tuo codice</span><span class="bf__code-val"></span></span><button class="bf__code-btn" type="button">Copia</button></div>
+      <a class="bf__cta" href="#"></a>
+    </div>
+  </div>
+</section>
+
+<footer class="dt-footer">
+  <div class="dt-footer-cols">
+    <div>
+      <h4>Chi siamo</h4>
+      <ul>
+        <li><a href="https://ditano.com/pages/storia">La nostra Storia</a></li>
+        <li><a href="https://ditano.com/pages/expertise">La nostra Expertise</a></li>
+        <li><a href="https://ditano.com/pages/servizi">I nostri Servizi</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Informazioni Utili</h4>
+      <ul>
+        <li><a href="https://ditano.com/pages/termini-e-condizioni-di-vendita">Condizioni di Vendita</a></li>
+        <li><a href="https://ditano.com/pages/info-spedizioni">Info Spedizione</a></li>
+        <li><a href="https://ditano.com/pages/regolamento-fidelity-card">Regolamento Fidelity Card</a></li>
+        <li><a href="https://ditano.com/pages/domande-frequenti">Domande Frequenti (FAQ)</a></li>
+        <li><a href="https://ditano.com/pages/cookie-policy">Cookie Policy</a></li>
+        <li><a href="https://ditano.com/pages/eu-modulo-recesso">Diritto di Recesso</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Top Brand</h4>
+      <ul>
+        <li><a href="https://ditano.com/collections/dior">Dior</a></li>
+        <li><a href="https://ditano.com/collections/guerlain">Guerlain</a></li>
+        <li><a href="https://ditano.com/collections/lancome">Lancome</a></li>
+        <li><a href="https://ditano.com/collections/collistar">Collistar</a></li>
+        <li><a href="https://ditano.com/collections/estee-lauder">Estee Lauder</a></li>
+      </ul>
+    </div>
+    <div class="dt-footer-service">
+      <h4>Servizio Clienti</h4>
+      Dal Luned&igrave; al Venerd&igrave;<br>9.00-13.00 / 14.00-17.00<br>Il Sabato 9.00-12.30<br>
+      +39 080.4392521<br>assistenza@ditano.com<br>
+      <div style="margin-top:10px;">Facebook &middot; Instagram</div>
+    </div>
+  </div>
+  <div class="dt-footer-bottom">
+    <div class="dt-pay">
+      <span>Visa</span><span>American Express</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span><span>Google Pay</span><span>Scalapay</span><span>Satispay</span><span>Bonifico</span><span>Contrassegno</span>
+    </div>
+    &copy; 2026, All Rights Reserved - DITANO S.r.l. - PI:02629180742 - Piazza Ciaia, 18 Fasano (BR)<br>
+    Termini e Condizioni | Privacy Policy | Cookie Policy
+  </div>
+</footer>
+
+<script>
+// --- 6 SLOT DI ESEMPIO (3 -> 30 novembre, durate variabili) ---
+// Immagini demo: foto prodotto reali dal CDN Shopify di ditano.com (products.json).
+var SLOTS = [
+  { start:'2026-11-03', end:'2026-11-09', name:'Il colore', title:'Il make-up, come un gesto quotidiano di cura', desc:'Rossetti, palette e fondotinta scelti dalla nostra profumeria: una settimana per ritrovare il piacere del colore, con un vantaggio dedicato del 20%.', code:'BF-MAKEUP', cta:'Scopri la selezione make-up', ctaUrl:'https://ditano.com/collections/make-up', img:'https://cdn.shopify.com/s/files/1/0645/5096/1316/files/ae5c23cb-43e3-4e05-8fd1-0c190e308fd2.jpg?v=1791981598' },
+  { start:'2026-11-10', end:'2026-11-16', name:'La cura', title:'La routine viso, scelta con competenza', desc:'Sieri, creme e trattamenti selezionati per una pelle piu consapevole. Per questa settimana, tre prodotti skincare con il piu accessibile in omaggio.', code:'BF-SKIN32', cta:'Scopri la cura viso', ctaUrl:'https://ditano.com/collections/trattamenti-viso', img:'https://cdn.shopify.com/s/files/1/0645/5096/1316/files/d1fbe21b-a309-410d-b012-490dce1cb8be.jpg?v=1791981780' },
+  { start:'2026-11-17', end:'2026-11-21', name:'La traccia', title:'Le fragranze che lasciano una traccia elegante', desc:'Le grandi maison e le nostre proposte d autore: eau de parfum e cofanetti scelti per carattere e memoria, con un vantaggio fino al 30%.', code:'BF-PROFUMI', cta:'Scopri le fragranze', ctaUrl:'https://ditano.com/collections/profumi', img:'https://cdn.shopify.com/s/files/1/0645/5096/1316/files/f17de2b4-8b32-4e98-8987-f7ead2c9f4cb.jpg?v=1791981773' },
+  { start:'2026-11-22', end:'2026-11-26', name:'Il rituale', title:'Il rituale capelli, dalla nostra selezione', desc:'Shampoo, maschere e styling pensati per la cura di ogni giorno, con il 25% dedicato e un campione scelto per te oltre i 49 euro.', code:'BF-HAIR25', cta:'Scopri il rituale capelli', ctaUrl:'https://ditano.com/collections/capelli', img:'https://cdn.shopify.com/s/files/1/0645/5096/1316/files/6346a902-2059-49ca-97f8-138f6b5525f4_756807d3-bf70-413f-983f-677600f9c03d.jpg?v=1791981553' },
+  { start:'2026-11-27', end:'2026-11-28', name:'L anteprima', title:'Un anticipo riservato, prima di tutti', desc:'Due giorni di anteprima sulla nostra selezione piu attesa, con un vantaggio dedicato del 35%: la bellezza che sceglie di arrivare prima.', code:'BF-PREVIEW35', cta:'Entra in anteprima', ctaUrl:'https://ditano.com/collections/novita', img:'https://cdn.shopify.com/s/files/1/0645/5096/1316/files/4ac0f974-e96b-428c-9f96-eabab9e88981.jpg?v=1791981755' },
+  { start:'2026-11-29', end:'2026-11-30', name:'Il finale', title:'Il nostro saluto a novembre', desc:'Il momento piu generoso del mese: una selezione ampia con il nostro miglior vantaggio, scelta con la stessa cura della nostra profumeria dal 1959.', code:'BF-NOVEMBRE', cta:'Scopri la selezione', ctaUrl:'https://ditano.com/collections/promozioni-e-omaggi', img:'https://cdn.shopify.com/s/files/1/0645/5096/1316/files/eb40811f-cbd4-43a0-aa30-e80f87cdc451.jpg?v=1791981749' }
+];
+var MESI=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+function key(d){var p=d.split('-');return parseInt(p[0])*10000+parseInt(p[1])*100+parseInt(p[2]);}
+function kparts(k){return{y:Math.floor(k/10000),m:Math.floor(k/100)%100,d:k%100};}
+function fmtRange(sk,ek){var a=kparts(sk),b=kparts(ek);if(a.m===b.m)return a.d+'-'+b.d+' '+MESI[b.m-1];return a.d+' '+MESI[a.m-1]+' - '+b.d+' '+MESI[b.m-1];}
+
+var root=document.getElementById('bf'),strip=document.getElementById('bf-strip'),hero=document.getElementById('bf-hero'),modal=document.getElementById('bf-modal');
+var simDate='2026-11-15';
+function todayKey(){var p=simDate.split('-');return parseInt(p[0])*10000+parseInt(p[1])*100+parseInt(p[2]);}
+
+function render(){
+  var tk=todayKey();
+  strip.innerHTML='';hero.className='bf__hero bf__hero--none';
+  hero.innerHTML='<div class="bf__hero-body"><p class="bf__hero-none-title">La prima proposta sta per aprirsi</p><p class="bf__hero-none-sub">Torna presto: la nostra selezione di novembre si rivela un momento alla volta.</p></div>';
+  var active=null;
+  SLOTS.forEach(function(s){
+    var sk=key(s.start),ek=key(s.end);
+    var div=document.createElement('div');div.className='bf__slot';
+    var future = sk>tk;                 // GATE: simuliamo il gate server
+    if(future){
+      div.classList.add('bf__slot--future');
+      div.innerHTML='<svg class="bf__lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>'+
+        '<span class="bf__slot-dates">&nbsp;</span>'+
+        '<span class="bf__slot-name">In arrivo</span>'+
+        '<span class="bf__slot-tag">Prossima promo</span>';
+    } else {
+      var tag,cls='';
+      if(tk>=sk&&tk<=ek){tag='Attiva ora';cls='bf__slot--active';active=s;}
+      else if(tk>ek){tag='Conclusa';cls='bf__slot--past';}
+      else {tag='In arrivo';cls='bf__slot--future';}
+      div.classList.add(cls);
+      div.innerHTML='<span class="bf__slot-dates">'+fmtRange(sk,ek)+'</span>'+
+        '<span class="bf__slot-name">'+(s.name||s.title)+'</span>'+
+        '<span class="bf__slot-tag">'+tag+'</span>';
+      if(cls==='bf__slot--active'){div.tabIndex=0;div.addEventListener('click',function(){openSlot(s);});}
+    }
+    strip.appendChild(div);
+  });
+  if(active) buildHero(active);
+}
+
+function buildHero(s){
+  var sk=key(s.start),ek=key(s.end);
+  hero.className='bf__hero';
+  hero.innerHTML='<div class="bf__hero-media'+(s.img?'':' bf__hero-media--empty')+'"><span class="bf__hero-badge"><span class="dot"></span>Attiva ora</span>'+(s.img?'<img src="'+s.img+'" alt="">':'')+'</div>'+
+    '<div class="bf__hero-body">'+
+    '<p class="bf__hero-period">'+fmtRange(sk,ek)+'</p>'+
+    '<h3 class="bf__hero-title">'+s.title+'</h3>'+
+    '<p class="bf__hero-desc">'+s.desc+'</p>'+
+    '<div class="bf__count" data-end="'+ek+'">'+
+      '<div class="bf__count-box"><span class="bf__count-n" data-u="d">0</span><span class="bf__count-l">giorni</span></div>'+
+      '<div class="bf__count-box"><span class="bf__count-n" data-u="h">00</span><span class="bf__count-l">ore</span></div>'+
+      '<div class="bf__count-box"><span class="bf__count-n" data-u="m">00</span><span class="bf__count-l">min</span></div>'+
+      '<div class="bf__count-box"><span class="bf__count-n" data-u="s">00</span><span class="bf__count-l">sec</span></div>'+
+    '</div>'+
+    '<div class="bf__code"><span><span class="bf__code-lab">Il tuo codice</span><span class="bf__code-val">'+s.code+'</span></span><button class="bf__code-btn" type="button">Copia</button></div>'+
+    '<a class="bf__cta" href="'+s.ctaUrl+'">'+s.cta+'</a>'+
+    '</div>';
+  hero.querySelector('.bf__code-btn').addEventListener('click',function(e){var b=e.target;navigator.clipboard.writeText(s.code);b.textContent='Copiato';b.classList.add('is-copied');setTimeout(function(){b.textContent='Copia';b.classList.remove('is-copied');},1500);});
+  startCountdown(ek);
+}
+
+var timer=null;
+function startCountdown(ek){
+  var box=hero.querySelector('.bf__count');if(!box)return;
+  var p=kparts(ek);
+  var end=new Date(p.y+'-'+String(p.m).padStart(2,'0')+'-'+String(p.d).padStart(2,'0')+'T23:59:59+01:00');
+  var simNow=new Date(simDate+'T12:00:00+01:00');var started=Date.now();
+  function tick(){
+    var now=new Date(simNow.getTime()+(Date.now()-started));
+    var diff=Math.max(0,end-now),s=Math.floor(diff/1000);
+    var d=Math.floor(s/86400);s-=d*86400;var h=Math.floor(s/3600);s-=h*3600;var m=Math.floor(s/60);s-=m*60;
+    box.querySelector('[data-u=d]').textContent=d;
+    box.querySelector('[data-u=h]').textContent=String(h).padStart(2,'0');
+    box.querySelector('[data-u=m]').textContent=String(m).padStart(2,'0');
+    box.querySelector('[data-u=s]').textContent=String(s).padStart(2,'0');
+  }
+  tick();if(timer)clearInterval(timer);timer=setInterval(tick,1000);
+}
+
+function openSlot(s){
+  var sk=key(s.start),ek=key(s.end),c=modal.querySelector('.bf__card');
+  c.querySelector('.bf__card-period').textContent=fmtRange(sk,ek);
+  c.querySelector('.bf__card-title').textContent=s.title;
+  c.querySelector('.bf__card-desc').textContent=s.desc;
+  var mi=c.querySelector('.bf__card-img');
+  if(s.img){mi.src=s.img;mi.hidden=false;}else{mi.hidden=true;}
+  c.querySelector('.bf__code').hidden=false;c.querySelector('.bf__code-val').textContent=s.code;
+  var cta=c.querySelector('.bf__cta');cta.href=s.ctaUrl;cta.textContent=s.cta;cta.hidden=false;
+  modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+}
+modal.querySelector('.bf__close').addEventListener('click',function(){modal.classList.remove('is-open');document.body.style.overflow='';});
+modal.addEventListener('click',function(e){if(e.target===modal){modal.classList.remove('is-open');document.body.style.overflow='';}});
+modal.querySelector('.bf__code-btn').addEventListener('click',function(e){var v=modal.querySelector('.bf__code-val').textContent;navigator.clipboard.writeText(v);e.target.textContent='Copiato';e.target.classList.add('is-copied');setTimeout(function(){e.target.textContent='Copia';e.target.classList.remove('is-copied');},1500);});
+
+document.getElementById('apply').addEventListener('click',function(){simDate=document.getElementById('simDate').value;render();});
+render();
+</script>
+</body>
+</html>
