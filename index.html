@@ -1,364 +1,349 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anteprima - Black Friday Ditano 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ditano - Piano Black Friday 2026 - Timeline promozioni novembre</title>
 <style>
-  @font-face{font-family:'GaramondPremrPro';src:url(https://cdn.shopify.com/s/files/1/0645/5096/1316/files/GaramondPremrPro.woff2?v=1730106046) format('woff2');font-display:swap;}
-  @font-face{font-family:'Alexandria-VariableFont_wght';src:url(https://cdn.shopify.com/s/files/1/0645/5096/1316/files/Alexandria-VariableFont_wght.woff2?v=1730106815) format('woff2');font-display:swap;}
   :root{
-    --taupe:#413D38;     /* fondo creativita (scuro) */
-    --taupe-lt:#6B6058;  /* fondo creativita (schiarito, luce) */
-    --bordeaux:#910D37;  /* badge/accento firma reale */
-    --bordeaux-sc:#6f0a2a;
-    --nerocta:#1B1B1A;    /* CTA nera reale */
-    --oro:#C4A062;        /* oro caldo dettagli prodotto */
-    --rosa:#E8C7C2;       /* rosa cipria prodotti */
-    --greige:#CFC6BA;     /* taupe chiaro superfici */
-    --greige-sc:#B8AC9C;
-    --travertino:#EDE4D6; /* pietra chiara */
-    --crema:#FAF5EE;      /* fondo corpo caldo */
-    --nero:#1a1a1a;
-    --testo:#3B3129;      /* testo caldo su chiaro */
-    --linea:#E3D8C9;
-    --bianco:#fff;
+    --navy:#00253D;
+    --ciano:#66CBF2;
+    --viola:#93609E;
+    --ink:#1B2B38;
+    --grey:#5a6b78;
+    --line:#d9e2ea;
+    --bg:#f4f7fa;
+    --card:#ffffff;
+    --ok:#1e8e5a;
+    --warn:#c0392b;
+    --gold:#b8860b;
   }
-  *{box-sizing:border-box;}
-  body{margin:0;font-family:'Alexandria-VariableFont_wght',system-ui,-apple-system,sans-serif;color:var(--testo);background:var(--crema);}
-  .toolbar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--linea);padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:13px;}
-  .toolbar label{color:#6a5f54;}
-  .toolbar input[type=date]{background:#fff;border:1px solid var(--linea);color:var(--nero);border-radius:7px;padding:6px 10px;font:inherit;}
-  .toolbar button{background:var(--bordeaux);border:none;color:#fff;border-radius:7px;padding:7px 14px;font:inherit;font-weight:600;cursor:pointer;}
-  .toolbar .hint{color:#9a8c7c;font-size:12px;}
-
-  #bf *{box-sizing:border-box;}
-  #bf [hidden]{display:none !important;}
-
-  /* ===== Banner fedele alla creativita: taupe scuro, titolo serif bianco ===== */
-  .bf__banner{
-    background:
-      radial-gradient(120% 140% at 88% 18%, var(--taupe-lt) 0%, transparent 60%),
-      linear-gradient(100deg,var(--taupe) 0%,#4A443E 55%,var(--taupe-lt) 100%);
-    color:#fff;text-align:center;padding:clamp(48px,7vw,86px) 20px clamp(40px,5vw,58px);position:relative;overflow:hidden;
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Montserrat','Segoe UI',system-ui,-apple-system,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.5;
+    padding:0 0 60px;
   }
-  .bf__banner::after{content:"";display:block;width:54px;height:2px;background:var(--bordeaux);margin:24px auto 0;position:relative;}
-  .bf__banner-kick{display:inline-block;font-size:clamp(10px,1.5vw,12px);letter-spacing:.3em;text-transform:uppercase;color:#e9e4dd;font-weight:600;margin:0 0 18px;position:relative;}
-  .bf__banner-title{font-family:'GaramondPremrPro',Georgia,serif;font-size:clamp(34px,7vw,64px);line-height:1.04;margin:0;font-weight:500;color:#fff;position:relative;}
-  .bf__banner-sub{margin:18px auto 0;max-width:680px;font-size:clamp(13px,1.8vw,16px);line-height:1.7;color:#ece7e0;position:relative;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
 
-  /* ===== Board su greige chiaro caldo ===== */
-  .bf__board{
-    background:
-      radial-gradient(90% 60% at 50% 0%, rgba(237,228,214,.7), transparent 70%),
-      var(--greige);
-    padding:clamp(32px,4vw,68px) clamp(16px,4vw,56px) clamp(48px,7vw,88px);
+  /* HEADER */
+  header{
+    background:linear-gradient(135deg,var(--navy) 0%,#013a5e 100%);
+    color:#fff;
+    padding:48px 0 40px;
+    position:relative;
+    overflow:hidden;
   }
-  .bf__wrap{max-width:1120px;margin:0 auto;}
-  .bf__hero{position:relative;background:var(--crema);border:1px solid var(--linea);border-radius:6px;overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;box-shadow:0 30px 70px -42px rgba(65,61,56,.6);}
-  @media(max-width:760px){.bf__hero{grid-template-columns:1fr;}}
-  .bf__hero-media{position:relative;min-height:340px;background:var(--travertino);display:flex;align-items:center;justify-content:center;overflow:hidden;}
-  .bf__hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-  .bf__hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 72%,rgba(250,245,238,.3));pointer-events:none;}
-  .bf__hero-media--empty{background:linear-gradient(150deg,var(--rosa),var(--travertino));}
-  .bf__hero-badge{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;background:var(--bordeaux);color:#fff;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:30px;margin:0 0 14px;box-shadow:0 6px 18px -8px rgba(145,13,55,.6);}
-  .bf__hero-badge .dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:bfPulse 1.6s infinite;}
-  @keyframes bfPulse{0%,100%{opacity:1;}50%{opacity:.35;}}
-  .bf__hero-body{padding:clamp(28px,3.5vw,52px);display:flex;flex-direction:column;justify-content:center;}
-  .bf__hero-period{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--bordeaux);font-weight:600;margin:0 0 14px;}
-  .bf__hero-title{font-family:'GaramondPremrPro',Georgia,serif;color:var(--taupe);font-size:clamp(27px,4.2vw,42px);line-height:1.12;margin:0 0 16px;font-weight:500;}
-  .bf__hero-prod{font-size:14px;color:#8a7d6d;margin:0 0 14px;}
-  .bf__hero-prod b{color:var(--bordeaux);font-weight:600;}
-  .bf__hero-desc{font-size:15px;line-height:1.72;color:var(--testo);margin:0 0 26px;}
-  .bf__count{display:flex;gap:10px;margin:0 0 26px;}
-  .bf__count-box{background:var(--taupe);border:1px solid var(--taupe);border-radius:7px;padding:11px 14px;text-align:center;min-width:60px;}
-  .bf__count-n{font-family:'GaramondPremrPro',Georgia,serif;font-size:clamp(22px,3vw,30px);color:#fff;line-height:1;display:block;}
-  .bf__count-l{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#cfc6ba;margin-top:5px;display:block;}
-  .bf__code{border:1px dashed var(--bordeaux);border-radius:8px;padding:15px 17px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px;background:rgba(145,13,55,.05);}
-  .bf__code-lab{font-size:9.5px;text-transform:uppercase;letter-spacing:.14em;color:#a08b6a;display:block;margin-bottom:3px;text-align:left;}
-  .bf__code-val{font-family:'GaramondPremrPro',Georgia,serif;font-size:clamp(19px,3vw,26px);font-weight:600;letter-spacing:.06em;color:var(--bordeaux);}
-  .bf__code-btn{border:none;background:var(--bordeaux);color:#fff;padding:11px 19px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:inherit;transition:background .2s;}
-  .bf__code-btn:hover{background:var(--bordeaux-sc);}
-  .bf__code-btn.is-copied{background:#2e7d32;}
-  .bf__cta{display:inline-block;text-align:center;background:var(--nerocta);color:#fff;text-decoration:none;padding:16px 24px;border-radius:6px;font-weight:600;font-size:15px;letter-spacing:.03em;text-transform:uppercase;transition:background .2s,transform .2s;}
-  .bf__cta:hover{background:#000;transform:translateY(-2px);}
-  .bf__hero--none{grid-template-columns:1fr;text-align:center;background:linear-gradient(150deg,var(--rosa),var(--travertino));}
-  .bf__hero--none .bf__hero-body{align-items:center;padding:clamp(44px,6vw,76px) 24px;}
-  .bf__hero-none-title{font-family:'GaramondPremrPro',Georgia,serif;font-size:clamp(24px,4vw,38px);color:var(--taupe);margin:0 0 10px;font-weight:500;}
-  .bf__hero-none-sub{font-size:15px;color:#7a6b5b;margin:0;max-width:460px;}
-  .bf__strip-h{margin:clamp(34px,4vw,50px) 0 16px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#7a6f61;font-weight:600;display:flex;align-items:center;gap:12px;}
-  .bf__strip-h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--greige-sc),transparent);}
-  .bf__strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(152px,1fr));gap:12px;}
-  .bf__slot{position:relative;background:var(--crema);border:1px solid var(--linea);border-radius:6px;padding:16px 15px;min-height:116px;display:flex;flex-direction:column;gap:6px;transition:border-color .2s,transform .2s,box-shadow .2s;}
-  .bf__slot-dates{font-size:11px;letter-spacing:.04em;color:#9a8c7c;}
-  .bf__slot-name{font-family:'GaramondPremrPro',Georgia,serif;font-size:16px;line-height:1.2;color:var(--taupe);}
-  .bf__slot-tag{margin-top:auto;font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;}
-  .bf__slot--active{border-color:var(--bordeaux);background:linear-gradient(160deg,#fff,var(--travertino));cursor:pointer;box-shadow:0 14px 30px -18px rgba(145,13,55,.5);}
-  .bf__slot--active::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--bordeaux);border-radius:6px 6px 0 0;}
-  .bf__slot--active:hover{transform:translateY(-3px);}
-  .bf__slot--active .bf__slot-tag{color:var(--bordeaux);}
-  .bf__slot--past{opacity:.48;}
-  .bf__slot--past .bf__slot-tag{color:#9a8c7c;}
-  .bf__slot--future{background:var(--greige);border-style:dashed;border-color:var(--greige-sc);}
-  .bf__slot--future .bf__slot-name{color:#9b8f7f;}
-  .bf__slot--future .bf__slot-tag{color:var(--bordeaux);opacity:.7;}
-  .bf__lock{position:absolute;top:14px;right:14px;width:14px;height:14px;opacity:.4;color:#9a8c7c;}
-  .bf__modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(65,61,56,.6);}
-  .bf__modal.is-open{display:flex;}
-  .bf__card{background:var(--crema);border-top:4px solid var(--bordeaux);border-radius:10px;max-width:460px;width:100%;padding:clamp(26px,4vw,42px);text-align:center;position:relative;color:var(--testo);max-height:90vh;overflow-y:auto;box-shadow:0 40px 90px -30px rgba(65,61,56,.6);}
-  .bf__close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--taupe);opacity:.5;}
-  .bf__card-period{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--bordeaux);font-weight:600;margin:0 0 10px;}
-  .bf__card-title{font-family:'GaramondPremrPro',Georgia,serif;font-size:clamp(22px,4vw,30px);color:var(--taupe);margin:0 0 12px;line-height:1.16;font-weight:500;}
-  .bf__card-img{width:100%;border-radius:8px;margin:0 0 16px;display:block;}
-  .bf__card-desc{font-size:15px;line-height:1.66;color:var(--testo);margin:0 0 22px;}
+  header::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:6px;
+    background:var(--ciano);
+  }
+  header .wrap{position:relative;z-index:2;}
+  .eyebrow{
+    display:inline-block;letter-spacing:3px;text-transform:uppercase;
+    font-size:12px;font-weight:700;color:var(--ciano);margin-bottom:12px;
+  }
+  header h1{font-size:40px;font-weight:800;line-height:1.1;margin-bottom:10px;color:#fff;}
+  header p.sub{font-size:17px;color:#cfe8f6;max-width:720px;}
+  .wave{position:absolute;right:-40px;top:-30px;width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%,rgba(102,203,242,.35),transparent 60%);z-index:1;}
 
-  /* ===== HEADER / FOOTER DITANO (demo preview) ===== */
-  .dt-announce{background:#111;color:#fff;font-size:12px;text-align:center;padding:8px 16px;letter-spacing:.03em;}
-  .dt-announce span{margin:0 14px;opacity:.9;}
-  .dt-header{background:#fff;color:#111;border-bottom:1px solid #eee;}
-  .dt-header-top{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:18px 24px;gap:20px;}
-  .dt-logo{font-family:'GaramondPremrPro',Georgia,serif;font-size:30px;font-weight:600;letter-spacing:.14em;color:#111;text-decoration:none;}
-  .dt-search{flex:1;max-width:460px;border:1px solid #ddd;border-radius:30px;padding:9px 18px;color:#999;font-size:13px;}
-  .dt-icons{display:flex;gap:18px;color:#111;font-size:13px;}
-  .dt-nav{border-top:1px solid #f0f0f0;}
-  .dt-nav ul{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;max-width:1200px;margin:0 auto;padding:12px 24px;list-style:none;}
-  .dt-nav a{color:#1d1d1d;text-decoration:none;font-size:13px;letter-spacing:.06em;text-transform:uppercase;}
-  .dt-nav a.promo{color:#9D003C;font-weight:600;}
-  .dt-nav a:hover{color:#9D003C;}
-  @media(max-width:760px){.dt-search{display:none;}.dt-nav ul{gap:14px;font-size:11px;}}
+  /* SUMMARY STRIP */
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-26px;position:relative;z-index:5;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px;
+    box-shadow:0 6px 18px rgba(0,37,61,.06);}
+  .kpi .n{font-size:26px;font-weight:800;color:var(--navy);}
+  .kpi .l{font-size:12.5px;color:var(--grey);margin-top:4px;font-weight:600;}
 
-  .dt-footer{background:#fff;color:#333;border-top:1px solid #eee;padding:44px 24px 20px;}
-  .dt-footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:30px;max-width:1200px;margin:0 auto 30px;}
-  .dt-footer-cols h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#111;margin:0 0 14px;}
-  .dt-footer-cols ul{list-style:none;margin:0;padding:0;}
-  .dt-footer-cols li{margin:0 0 9px;}
-  .dt-footer-cols a{color:#666;text-decoration:none;font-size:13px;}
-  .dt-footer-cols a:hover{color:#9D003C;}
-  .dt-footer-service{font-size:13px;color:#555;line-height:1.7;}
-  .dt-footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid #eee;padding-top:18px;font-size:11px;color:#999;line-height:1.6;}
-  .dt-pay{margin:14px 0;display:flex;flex-wrap:wrap;gap:8px;}
-  .dt-pay span{border:1px solid #e4e4e4;border-radius:5px;padding:3px 9px;font-size:10px;color:#888;}</style>
+  section{margin-top:44px;}
+  h2{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--viola);
+    font-weight:800;margin-bottom:20px;border-left:4px solid var(--ciano);padding-left:12px;}
+
+  /* TIMELINE */
+  .timeline{position:relative;padding-left:40px;}
+  .timeline::before{content:"";position:absolute;left:14px;top:6px;bottom:6px;width:3px;
+    background:linear-gradient(180deg,var(--ciano),var(--viola));border-radius:3px;}
+  .week{position:relative;margin-bottom:26px;}
+  .dot{position:absolute;left:-33px;top:4px;width:26px;height:26px;border-radius:50%;
+    background:var(--card);border:3px solid var(--ciano);display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:12px;color:var(--navy);}
+  .week.final .dot{border-color:var(--warn);color:var(--warn);}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,37,61,.05);}
+  .card .top{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;
+    align-items:center;gap:12px;justify-content:space-between;}
+  .week.final .card .top{background:linear-gradient(135deg,#2b0b12,#4a0d1c);border-bottom:none;}
+  .week.final .card .top h3,.week.final .card .top .dates{color:#fff;}
+  .card h3{font-size:19px;font-weight:800;color:var(--navy);}
+  .dates{font-size:13px;font-weight:700;color:var(--grey);background:#eef3f7;padding:5px 12px;border-radius:999px;}
+  .week.final .dates{background:rgba(255,255,255,.15);}
+  .card .body{padding:18px 20px;}
+  .theme{font-size:13px;color:var(--viola);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+  .mechlist{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+  .mech{background:#eef7fc;border:1px solid #cfe8f6;color:var(--navy);font-weight:700;font-size:13px;
+    padding:7px 13px;border-radius:10px;}
+  .mech.strong{background:#f3ecf6;border-color:#e0cce8;color:var(--viola);}
+  .mech.bf{background:#fdecec;border-color:#f5c6c6;color:var(--warn);}
+  .brands{font-size:14px;color:var(--ink);}
+  .brands b{color:var(--navy);}
+  .note{font-size:12.5px;color:var(--grey);margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);}
+
+  /* CODICI BOX */
+  .codes{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .code{border-radius:16px;padding:22px;color:#fff;position:relative;overflow:hidden;}
+  .code.c10{background:linear-gradient(135deg,var(--navy),#013a5e);}
+  .code.c15{background:linear-gradient(135deg,#4a0d1c,#2b0b12);}
+  .code .tag{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;opacity:.85;}
+  .code .big{font-size:34px;font-weight:800;margin:6px 0;font-family:'Courier New',monospace;letter-spacing:1px;}
+  .code .perc{font-size:40px;font-weight:800;color:var(--ciano);}
+  .code.c15 .perc{color:#ff9aa9;}
+  .code .cond{font-size:13.5px;margin-top:8px;opacity:.92;}
+  .vs{text-align:center;font-weight:800;color:var(--grey);margin:14px 0;font-size:13px;letter-spacing:1px;}
+
+  /* LEGENDA MECCANICHE */
+  .mechtable{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;
+    border:1px solid var(--line);font-size:14px;}
+  .mechtable th{background:var(--navy);color:#fff;text-align:left;padding:12px 14px;font-size:12.5px;
+    letter-spacing:1px;text-transform:uppercase;}
+  .mechtable td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top;}
+  .mechtable tr:nth-child(even) td{background:#f8fbfd;}
+  .mechtable .k{font-weight:800;color:var(--navy);white-space:nowrap;}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;}
+  .pill.no{background:#fdecec;color:var(--warn);}
+  .pill.yes{background:#e6f5ee;color:var(--ok);}
+
+  .callout{background:#fff8e6;border:1px solid #f0dca0;border-left:5px solid var(--gold);
+    border-radius:12px;padding:16px 18px;font-size:14px;color:#5c4a12;}
+  .callout b{color:var(--gold);}
+
+  footer{margin-top:50px;text-align:center;font-size:12px;color:var(--grey);}
+
+  @media print{
+    body{background:#fff;}
+    header{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .code,.mech,.mechtable th,.week.final .card .top{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .kpi,.card,.callout{box-shadow:none;}
+    section{page-break-inside:avoid;}
+  }
+  @media (max-width:760px){
+    .strip{grid-template-columns:1fr 1fr;}
+    .codes{grid-template-columns:1fr;}
+    header h1{font-size:30px;}
+  }
+</style>
 </head>
 <body>
 
-<div class="toolbar">
-  <label>Simula data:</label>
-  <input type="date" id="simDate" value="2026-11-15" min="2026-10-20" max="2026-12-10">
-  <button id="apply">Vai</button>
-  <span class="hint">Prova 2026-11-02 (prima), 2026-11-15 (slot 2 attivo), 2026-12-01 (tutto concluso). I futuri non svelano nome/codice (gate server simulato).</span>
-</div>
-
-<div class="dt-announce">
-  <span>Campioni Omaggio</span><span>Spedizione Gratuita da 50&euro;</span><span>Consegna entro 2/3 giorni</span><span>Reso Facile</span>
-</div>
-<header class="dt-header">
-  <div class="dt-header-top">
-    <a class="dt-logo" href="https://ditano.com">DITANO</a>
-    <div class="dt-search">Cerca qui i prodotti</div>
-    <div class="dt-icons"><span>Accedi</span><span>Wishlist</span><span>Carrello</span></div>
+<header>
+  <div class="wave"></div>
+  <div class="wrap">
+    <span class="eyebrow">Ditano · Piano promozioni</span>
+    <h1>Black Friday 2026</h1>
+    <p class="sub">Timeline delle dinamiche promozionali di novembre: un codice sconto di base attivo tutto il mese, quattro settimane a tema con meccaniche crescenti e il gran finale Black Friday 24-30 novembre con doppio extra sconto.</p>
   </div>
-  <nav class="dt-nav">
-    <ul>
-      <li><a class="promo" href="https://ditano.com/pages/promozioni-e-omaggi">Promo</a></li>
-      <li><a href="https://ditano.com/collections/novita">Novit&agrave;</a></li>
-      <li><a href="https://ditano.com/collections/profumi">Profumi</a></li>
-      <li><a href="https://ditano.com/collections/profumi-di-nicchia">Fragranze di Nicchia</a></li>
-      <li><a href="https://ditano.com/collections/make-up">Make-Up</a></li>
-      <li><a href="https://ditano.com/collections/trattamenti-tutti">Trattamenti</a></li>
-      <li><a href="https://ditano.com/collections/trattamento-uomo">Uomo</a></li>
-      <li><a href="https://ditano.com/collections/capelli">Capelli</a></li>
-      <li><a href="https://ditano.com/collections/solari">Solari</a></li>
-      <li><a href="https://ditano.com/pages/marchi">Marchi</a></li>
-    </ul>
-  </nav>
 </header>
 
-<section id="bf" data-anno="2026" data-mese="11">
-  <div class="bf__banner">
-    <span class="bf__banner-kick">Black Friday Ditano 2026</span>
-    <h2 class="bf__banner-title">Ogni settimana, una scelta di bellezza</h2>
-    <p class="bf__banner-sub">Dal 3 al 30 novembre selezioniamo per te, un momento alla volta: ogni finestra apre una proposta curata, da cogliere finche' resta aperta.</p>
+<div class="wrap">
+
+  <div class="strip">
+    <div class="kpi"><div class="n">130.000&euro;</div><div class="l">Spesa paid prevista novembre</div></div>
+    <div class="kpi"><div class="n">7,7x</div><div class="l">ROAS target (su netto)</div></div>
+    <div class="kpi"><div class="n">1 mln&euro;</div><div class="l">Fatturato obiettivo (IVA esclusa)</div></div>
+    <div class="kpi"><div class="n">~11.600</div><div class="l">Ordini target</div></div>
   </div>
-  <div class="bf__board">
-    <div class="bf__wrap">
-      <div class="bf__hero bf__hero--none" id="bf-hero">
-        <div class="bf__hero-body">
-          <p class="bf__hero-none-title">La prima proposta sta per aprirsi</p>
-          <p class="bf__hero-none-sub">Torna presto: la nostra selezione di novembre si rivela un momento alla volta.</p>
+
+  <!-- CODICE BASE -->
+  <section>
+    <h2>Codice base: dal 3 novembre</h2>
+    <div class="card">
+      <div class="top">
+        <h3>BLACK10 - lo sconto che accompagna tutto il mese</h3>
+        <span class="dates">3 - 30 novembre</span>
+      </div>
+      <div class="body">
+        <div class="mechlist"><span class="mech">-10% su tutto il catalogo</span></div>
+        <div class="brands">Rete di fondo sempre attiva. Comunicato come vantaggio permanente del periodo, non come "offerta forte": serve a non bruciare la percezione prima del Black Friday. Le categorie che entrano "in evidenza" la loro settimana escono da questo codice e prendono solo la meccanica dedicata (vedi legenda a fondo pagina).</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE SETTIMANE -->
+  <section>
+    <h2>Le quattro settimane a tema</h2>
+    <div class="timeline">
+
+      <div class="week">
+        <div class="dot">S1</div>
+        <div class="card">
+          <div class="top"><h3>Make-up &amp; Skincare</h3><span class="dates">3 - 9 novembre</span></div>
+          <div class="body">
+            <div class="theme">3x2 mirato a smaltire l'overstock fermo</div>
+            <div class="mechlist">
+              <span class="mech strong">3x2 (il 3&deg; prodotto gratis)</span>
+            </div>
+            <div class="brands">Collezione costruita <b>sui prodotti ad alta giacenza e bassa rotazione</b> (non su tutto il make-up): skincare e make-up di <b>Clinique, Shiseido, Pupa, Elizabeth Arden, Diego Dalla Palma, Collistar</b>. Il 3x2 trasforma stock immobilizzato in volume e scontrino medio, senza toccare le fragranze premium che gia ruotano a margine pieno.</div>
+            <div class="note">Selezione basata sullo snapshot scorte 12/10: 207 referenze con giacenza &ge;30 unita e oltre un anno di copertura (14.524 unita ferme). Elenco operativo nel file "Candidati 3x2 overstock". La collezione 3x2 e esclusa da BLACK10 (due sconti prodotto non si sommano).</div>
+          </div>
         </div>
       </div>
-      <p class="bf__strip-h">Il percorso del mese</p>
-      <div class="bf__strip" id="bf-strip"></div>
+
+      <div class="week">
+        <div class="dot">S2</div>
+        <div class="card">
+          <div class="top"><h3>Capelli &amp; Strumenti</h3><span class="dates">10 - 16 novembre</span></div>
+          <div class="body">
+            <div class="theme">Spinta sulla categoria NEW piu promettente</div>
+            <div class="mechlist">
+              <span class="mech strong">2&deg; prodotto a -50%</span>
+            </div>
+            <div class="brands">Categorie: <b>ghd</b> (NEW, gia top 10), <b>Olaplex, Kerastase, Moroccanoil</b>. Il "secondo prodotto a meta prezzo" su tutta la collezione capelli e strumenti spinge l'acquisto abbinato (set + accessorio, trattamento + styling) e alza lo scontrino medio.</div>
+            <div class="note">Meccanica unica per tutta la settimana. In alternativa, se si preferisce una comunicazione piu semplice, l'intera collezione puo andare a <b>-15%</b> secco invece del 2&deg; a -50%.</div>
+            <div class="note">Meccanica nativa Shopify: sconto "Compra X, ottieni Y" con il secondo articolo a -50%. Nessuna app esterna.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="dot">S3</div>
+        <div class="card">
+          <div class="top"><h3>Fragranze - i grandi classici</h3><span class="dates">17 - 23 novembre</span></div>
+          <div class="body">
+            <div class="theme">Rianima i brand in calo e riscalda verso il BF</div>
+            <div class="mechlist">
+              <span class="mech strong">-15% extra su selezione fragranze</span>
+            </div>
+            <div class="brands">Spingi i motori: <b>DIOR, Guerlain (+120%), Valentino (+122%), Rabanne, Bvlgari</b>. Recupera i cali: <b>Prada (-42%), Armani (-32%), Narciso Rodriguez (-44%), Shiseido (-26%)</b>. Settimana ad alto margine assoluto: qui si fa il grosso del fatturato pre-picco.</div>
+            <div class="note">-15% e in linea con lo sconto dominante gia usato (15% su 484 referenze a ottobre): atteso dal cliente, non erode oltre la norma.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week final">
+        <div class="dot">BF</div>
+        <div class="card">
+          <div class="top"><h3>&#9733; Black Friday + Calendari dell'Avvento</h3><span class="dates">24 - 30 novembre</span></div>
+          <div class="body">
+            <div class="theme">Il picco: doppio extra sconto a scaglioni</div>
+            <div class="mechlist">
+              <span class="mech bf">BLACK10 · -10% su tutto</span>
+              <span class="mech bf">BLACK15 · -15% da 100&euro;</span>
+              <span class="mech strong">Calendari Avvento in evidenza</span>
+            </div>
+            <div class="brands">Tutto il catalogo attivo. In vetrina i <b>Calendari dell'Avvento</b> (Shiseido, Estee Lauder BlockBuster, Naima) - articolo stagionale ad alta marginalita e forte richiamo. I brand motore (DIOR, Guerlain, Estee Lauder +101%) reggono il volume del weekend.</div>
+            <div class="note">I due codici sono alternativi: il cliente ne applica uno solo. Sotto i 100&euro; conviene BLACK10, da 100&euro; in su conviene BLACK15. Vedi box sotto.</div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div class="bf__modal" id="bf-modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="bf__card">
-      <button class="bf__close" aria-label="Chiudi">&times;</button>
-      <p class="bf__card-period"></p>
-      <img class="bf__card-img" alt="" hidden>
-      <h3 class="bf__card-title"></h3>
-      <p class="bf__card-desc"></p>
-      <div class="bf__code" hidden><span><span class="bf__code-lab">Il tuo codice</span><span class="bf__code-val"></span></span><button class="bf__code-btn" type="button">Copia</button></div>
-      <a class="bf__cta" href="#"></a>
+  </section>
+
+  <!-- CODICI BLACK FRIDAY -->
+  <section>
+    <h2>Il doppio codice del weekend finale (24-30 nov)</h2>
+    <div class="codes">
+      <div class="code c10">
+        <div class="tag">Codice sempre attivo (dal 3 novembre)</div>
+        <div class="big">BLACK10</div>
+        <div class="perc">-10%</div>
+        <div class="cond">Su tutto il catalogo, senza minimo di spesa. Resta attivo per l'intero mese ed e l'offerta di riferimento anche nel weekend, per il carrello sotto i 100&euro;.</div>
+      </div>
+      <div class="code c15">
+        <div class="tag">Gradino premiante (solo 24-30 nov)</div>
+        <div class="big">BLACK15</div>
+        <div class="perc">-15%</div>
+        <div class="cond">Si aggiunge solo nel weekend finale. Su tutto il catalogo con spesa minima <b>100&euro;</b>: premia lo scontrino alto e alza il valore medio dell'ordine.</div>
+      </div>
     </div>
-  </div>
-</section>
-
-<footer class="dt-footer">
-  <div class="dt-footer-cols">
-    <div>
-      <h4>Chi siamo</h4>
-      <ul>
-        <li><a href="https://ditano.com/pages/storia">La nostra Storia</a></li>
-        <li><a href="https://ditano.com/pages/expertise">La nostra Expertise</a></li>
-        <li><a href="https://ditano.com/pages/servizi">I nostri Servizi</a></li>
-      </ul>
+    <div class="vs">I DUE CODICI NON SI SOMMANO - IL CLIENTE NE USA UNO SOLO</div>
+    <div class="callout">
+      <b>Logica dello scaglione:</b> da 100&euro; in su, il 15% vale piu del 10% (es. su 100&euro;: 15&euro; vs 10&euro;). Comunica BLACK15 come "spendi almeno 100&euro; e risparmi di piu": e la leva che fa salire il valore del carrello nel weekend chiave.
     </div>
-    <div>
-      <h4>Informazioni Utili</h4>
-      <ul>
-        <li><a href="https://ditano.com/pages/termini-e-condizioni-di-vendita">Condizioni di Vendita</a></li>
-        <li><a href="https://ditano.com/pages/info-spedizioni">Info Spedizione</a></li>
-        <li><a href="https://ditano.com/pages/regolamento-fidelity-card">Regolamento Fidelity Card</a></li>
-        <li><a href="https://ditano.com/pages/domande-frequenti">Domande Frequenti (FAQ)</a></li>
-        <li><a href="https://ditano.com/pages/cookie-policy">Cookie Policy</a></li>
-        <li><a href="https://ditano.com/pages/eu-modulo-recesso">Diritto di Recesso</a></li>
-      </ul>
+  </section>
+
+  <!-- CANDIDATI 3x2 -->
+  <section>
+    <h2>Come si giustifica il 3x2: smaltire l'overstock fermo</h2>
+    <p class="note" style="border:none;margin:0 0 16px;">Il 3x2 e la meccanica piu costosa a margine (fino a -33%): si applica solo dove serve, cioe sui prodotti con <b>grande giacenza che non ruotano abbastanza</b>. Selezione dallo snapshot scorte del 12/10/2026 (finestra 365 giorni): <b>207 referenze</b> con giacenza &ge;30 unita e piu di un anno di copertura, per <b>14.524 unita immobilizzate</b>. Trasformare questo stock in vendite abbinate e l'obiettivo della Settimana 1.</p>
+    <table class="mechtable">
+      <thead>
+        <tr><th>Brand</th><th>Referenze candidate</th><th>Unita immobilizzate</th><th>Nota</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="k">Clinique</td><td>21</td><td>2.545</td><td>Skincare idratante (Moisture Surge, Take The Day Off): acquisto ripetuto, ideale 3x2.</td></tr>
+        <tr><td class="k">Shiseido</td><td>16</td><td>2.191</td><td>Trattamento viso premium sovra-stoccato: alto valore unitario da muovere.</td></tr>
+        <tr><td class="k">Pupa</td><td>16</td><td>750</td><td>Make-up a basso prezzo medio: perfetto per il carrello da 3 pezzi.</td></tr>
+        <tr><td class="k">Elizabeth Arden</td><td>13</td><td>680</td><td>Skincare a rotazione lenta: il 3x2 ne accelera lo smaltimento.</td></tr>
+        <tr><td class="k">Estee Lauder</td><td>5</td><td>604</td><td>Cofanetti e trattamenti con copertura oltre i 2 anni.</td></tr>
+        <tr><td class="k">Diego Dalla Palma / Collistar</td><td>6 + 5</td><td>393 + 240</td><td>Make-up italiano ad alta rotazione d'acquisto multiplo.</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:14px;border:none;">Elenco operativo completo (tutte le 207 referenze con SKU, giacenza, rotazione e copertura) nel file Excel <b>Ditano_candidati_3x2_overstock.xlsx</b>, pronto per costruire la collezione Shopify "3x2". Si escludono le fragranze premium che gia ruotano a margine pieno.</div>
+  </section>
+
+  <!-- LEGENDA MECCANICHE -->
+  <section>
+    <h2>Combinabilita delle meccaniche</h2>
+    <table class="mechtable">
+      <thead>
+        <tr><th>Meccanica</th><th>Si combina col codice -10%?</th><th>Nota</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="k">-10% / -15% su tutto</td><td><span class="pill yes">E il codice base</span></td><td>Due codici diversi restano alternativi tra loro: uno per ordine.</td></tr>
+        <tr><td class="k">3x2 (3&deg; gratis)</td><td><span class="pill no">NO sulla stessa collezione</span></td><td>La collezione in 3x2 esce dal codice % quella settimana.</td></tr>
+        <tr><td class="k">2&deg; prodotto a -50%</td><td><span class="pill no">NO - tenere isolato</span></td><td>Alternativa al 3x2 per i set capelli.</td></tr>
+        <tr><td class="k">-15% extra su categoria</td><td><span class="pill no">NO - sostituisce il 10%</span></td><td>Due sconti prodotto non si sommano: vale sempre il piu conveniente.</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:14px;border:none;">Regola d'oro: <b>una sola meccanica "prodotto" per collezione alla volta</b>. Il codice % di base e la rete di fondo; quando una categoria va in evidenza la sua settimana, quella categoria viene esclusa dal codice e prende solo la meccanica forte dedicata.</div>
+  </section>
+
+  <!-- TAG PRODOTTO + BADGE PDP -->
+  <section>
+    <h2>Tag prodotto e badge in pagina (PDP)</h2>
+    <p class="note" style="border:none;margin:0 0 16px;">Un tag sul <b>prodotto</b> (non sulla collezione) con un doppio scopo: raccogliere automaticamente i prodotti nella collezione in promo e far comparire un <b>badge in PDP</b> che il cliente riconosce subito. Per questo il tag deve restare leggibile come etichetta e scritto sempre identico (MAIUSCOLO, senza spazi).</p>
+    <table class="mechtable">
+      <thead>
+        <tr><th>Fase / meccanica</th><th>Tag prodotto</th><th>Badge stampato in PDP</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="k">S1 · Make-up overstock</td><td><b>PROMO-3X2</b></td><td>3x2 · il 3&deg; in regalo</td></tr>
+        <tr><td class="k">S2 · Capelli &amp; Strumenti</td><td><b>PROMO-2A50</b></td><td>2&deg; prodotto a -50%</td></tr>
+        <tr><td class="k">S3 · Fragranze</td><td><b>PROMO-FRAGRANZE15</b></td><td>-15% fragranze</td></tr>
+      </tbody>
+    </table>
+    <div class="callout" style="margin-top:16px;">
+      <b>A cosa serve:</b> il tag raccoglie in automatico i prodotti nella collezione in promo e fa comparire il <b>badge in PDP</b>, cosi il cliente riconosce subito l'offerta. Lo sconto vero resta gestito a parte: il tag e la parte comunicativa, non applica il prezzo.
     </div>
-    <div>
-      <h4>Top Brand</h4>
-      <ul>
-        <li><a href="https://ditano.com/collections/dior">Dior</a></li>
-        <li><a href="https://ditano.com/collections/guerlain">Guerlain</a></li>
-        <li><a href="https://ditano.com/collections/lancome">Lancome</a></li>
-        <li><a href="https://ditano.com/collections/collistar">Collistar</a></li>
-        <li><a href="https://ditano.com/collections/estee-lauder">Estee Lauder</a></li>
-      </ul>
+  </section>
+
+  <!-- SCONTO MASSIMO PER FASE -->
+  <section>
+    <h2>Sconto massimo % implicato per fase (controllo margine)</h2>
+    <p class="note" style="border:none;margin:0 0 16px;">Poiche le meccaniche non si cumulano (una sola promozione per prodotto), lo sconto effettivo su un articolo e <b>il piu alto tra le meccaniche attive in quella fase, non la loro somma</b>. Valori calcolati su prodotti di pari prezzo.</p>
+    <table class="mechtable">
+      <thead>
+        <tr><th>Fase / periodo</th><th>Meccaniche attive</th><th>Sconto max effettivo</th><th>Come si genera</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="k">Base · dal 3 nov</td><td>BLACK10</td><td><b>-10%</b></td><td>Codice sul totale, senza minimo.</td></tr>
+        <tr><td class="k">S1 Make-up · 3-9 nov</td><td>3x2</td><td><b>-33,3%</b></td><td>Compri 3, ne paghi 2: 1 prodotto su 3 gratis.</td></tr>
+        <tr><td class="k">S2 Capelli · 10-16 nov</td><td>2&deg; a -50% (o -15% cat.)</td><td><b>-25%</b></td><td>Su 2 prodotti pari prezzo: meta su uno dei due = 25% sul totale. Alternativa -15% secco.</td></tr>
+        <tr><td class="k">S3 Fragranze · 17-23 nov</td><td>-15% categoria</td><td><b>-15%</b></td><td>Sconto diretto sulla collezione selezionata.</td></tr>
+        <tr><td class="k">Black Friday · 24-30 nov</td><td>BLACK10 / BLACK15</td><td><b>-15%</b></td><td>BLACK15 (min 100&euro;) e il massimo; alternativo a BLACK10.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout" style="margin-top:16px;">
+      <b>Tetto assoluto di sconto: -33,3%</b>, raggiunto solo dal 3x2 della Settimana 1 (make-up ad alta rotazione e margine, non fragranze premium). Nelle fasi fragranza/Black Friday il massimo resta <b>-15%</b>, in linea con lo sconto gia praticato a ottobre. Nessun prodotto puo cumulare due meccaniche: il rischio di erosione margine oltre il 33% e strutturalmente escluso.
     </div>
-    <div class="dt-footer-service">
-      <h4>Servizio Clienti</h4>
-      Dal Luned&igrave; al Venerd&igrave;<br>9.00-13.00 / 14.00-17.00<br>Il Sabato 9.00-12.30<br>
-      +39 080.4392521<br>assistenza@ditano.com<br>
-      <div style="margin-top:10px;">Facebook &middot; Instagram</div>
-    </div>
-  </div>
-  <div class="dt-footer-bottom">
-    <div class="dt-pay">
-      <span>Visa</span><span>American Express</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span><span>Google Pay</span><span>Scalapay</span><span>Satispay</span><span>Bonifico</span><span>Contrassegno</span>
-    </div>
-    &copy; 2026, All Rights Reserved - DITANO S.r.l. - PI:02629180742 - Piazza Ciaia, 18 Fasano (BR)<br>
-    Termini e Condizioni | Privacy Policy | Cookie Policy
-  </div>
-</footer>
+  </section>
 
-<script>
-// --- 6 SLOT DI ESEMPIO (3 -> 30 novembre, durate variabili) ---
-// Immagini demo: foto prodotto reali dal CDN Shopify di ditano.com (products.json).
-var SLOTS = [
-  { start:'2026-11-03', end:'2026-11-09', name:'Il colore', title:'Il make-up, come un gesto quotidiano di cura', desc:'Rossetti, palette e fondotinta scelti dalla nostra profumeria: una settimana per ritrovare il piacere del colore, con un vantaggio dedicato del 20%.', code:'BF-MAKEUP', cta:'Scopri la selezione make-up', ctaUrl:'https://ditano.com/collections/make-up', img:'img/bf-colore.png' },
-  { start:'2026-11-10', end:'2026-11-16', name:'La cura', title:'La routine viso, scelta con competenza', desc:'Sieri, creme e trattamenti selezionati per una pelle piu consapevole. Per questa settimana, tre prodotti skincare con il piu accessibile in omaggio.', code:'BF-SKIN32', cta:'Scopri la cura viso', ctaUrl:'https://ditano.com/collections/trattamenti-viso', img:'img/bf-cura.png' },
-  { start:'2026-11-17', end:'2026-11-21', name:'La traccia', title:'Le fragranze che lasciano una traccia elegante', desc:'Le grandi maison e le nostre proposte d autore: eau de parfum e cofanetti scelti per carattere e memoria, con un vantaggio fino al 30%.', code:'BF-PROFUMI', cta:'Scopri le fragranze', ctaUrl:'https://ditano.com/collections/profumi', img:'img/bf-profumi.png' },
-  { start:'2026-11-22', end:'2026-11-26', name:'Il rituale', title:'Il rituale capelli, dalla nostra selezione', desc:'Shampoo, maschere e styling pensati per la cura di ogni giorno, con il 25% dedicato e un campione scelto per te oltre i 49 euro.', code:'BF-HAIR25', cta:'Scopri il rituale capelli', ctaUrl:'https://ditano.com/collections/capelli', img:'img/bf-uomo.png' },
-  { start:'2026-11-27', end:'2026-11-28', name:'L anteprima', title:'Un anticipo riservato, prima di tutti', desc:'Due giorni di anteprima sulla nostra selezione piu attesa, con un vantaggio dedicato del 35%: la bellezza che sceglie di arrivare prima.', code:'BF-PREVIEW35', cta:'Entra in anteprima', ctaUrl:'https://ditano.com/collections/novita', img:'img/bf-profumi.png' },
-  { start:'2026-11-29', end:'2026-11-30', name:'Il finale', title:'Il nostro saluto a novembre', desc:'Il momento piu generoso del mese: una selezione ampia con il nostro miglior vantaggio, scelta con la stessa cura della nostra profumeria dal 1959.', code:'BF-NOVEMBRE', cta:'Scopri la selezione', ctaUrl:'https://ditano.com/collections/promozioni-e-omaggi', img:'img/bf-cura.png' }
-];
-var MESI=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
-function key(d){var p=d.split('-');return parseInt(p[0])*10000+parseInt(p[1])*100+parseInt(p[2]);}
-function kparts(k){return{y:Math.floor(k/10000),m:Math.floor(k/100)%100,d:k%100};}
-function fmtRange(sk,ek){var a=kparts(sk),b=kparts(ek);if(a.m===b.m)return a.d+'-'+b.d+' '+MESI[b.m-1];return a.d+' '+MESI[a.m-1]+' - '+b.d+' '+MESI[b.m-1];}
+  <footer>
+    Ditano - Piano Black Friday 2026 · Elaborato su performance brand ottobre 2026 e disponibilita al 26/10 · Documento di lavoro interno
+  </footer>
 
-var root=document.getElementById('bf'),strip=document.getElementById('bf-strip'),hero=document.getElementById('bf-hero'),modal=document.getElementById('bf-modal');
-var simDate='2026-11-15';
-function todayKey(){var p=simDate.split('-');return parseInt(p[0])*10000+parseInt(p[1])*100+parseInt(p[2]);}
-
-function render(){
-  var tk=todayKey();
-  strip.innerHTML='';hero.className='bf__hero bf__hero--none';
-  hero.innerHTML='<div class="bf__hero-body"><p class="bf__hero-none-title">La prima proposta sta per aprirsi</p><p class="bf__hero-none-sub">Torna presto: la nostra selezione di novembre si rivela un momento alla volta.</p></div>';
-  var active=null;
-  SLOTS.forEach(function(s){
-    var sk=key(s.start),ek=key(s.end);
-    var div=document.createElement('div');div.className='bf__slot';
-    var future = sk>tk;                 // GATE: simuliamo il gate server
-    if(future){
-      div.classList.add('bf__slot--future');
-      div.innerHTML='<svg class="bf__lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>'+
-        '<span class="bf__slot-dates">&nbsp;</span>'+
-        '<span class="bf__slot-name">In arrivo</span>'+
-        '<span class="bf__slot-tag">Prossima promo</span>';
-    } else {
-      var tag,cls='';
-      if(tk>=sk&&tk<=ek){tag='Attiva ora';cls='bf__slot--active';active=s;}
-      else if(tk>ek){tag='Conclusa';cls='bf__slot--past';}
-      else {tag='In arrivo';cls='bf__slot--future';}
-      div.classList.add(cls);
-      div.innerHTML='<span class="bf__slot-dates">'+fmtRange(sk,ek)+'</span>'+
-        '<span class="bf__slot-name">'+(s.name||s.title)+'</span>'+
-        '<span class="bf__slot-tag">'+tag+'</span>';
-      if(cls==='bf__slot--active'){div.tabIndex=0;div.addEventListener('click',function(){openSlot(s);});}
-    }
-    strip.appendChild(div);
-  });
-  if(active) buildHero(active);
-}
-
-function buildHero(s){
-  var sk=key(s.start),ek=key(s.end);
-  hero.className='bf__hero';
-  hero.innerHTML='<div class="bf__hero-media'+(s.img?'':' bf__hero-media--empty')+'">'+(s.img?'<img src="'+s.img+'" alt="">':'')+'</div>'+
-    '<div class="bf__hero-body">'+
-    '<span class="bf__hero-badge"><span class="dot"></span>Attiva ora</span>'+
-    '<p class="bf__hero-period">'+fmtRange(sk,ek)+'</p>'+
-    '<h3 class="bf__hero-title">'+s.title+'</h3>'+
-    '<p class="bf__hero-desc">'+s.desc+'</p>'+
-    '<div class="bf__count" data-end="'+ek+'">'+
-      '<div class="bf__count-box"><span class="bf__count-n" data-u="d">0</span><span class="bf__count-l">giorni</span></div>'+
-      '<div class="bf__count-box"><span class="bf__count-n" data-u="h">00</span><span class="bf__count-l">ore</span></div>'+
-      '<div class="bf__count-box"><span class="bf__count-n" data-u="m">00</span><span class="bf__count-l">min</span></div>'+
-      '<div class="bf__count-box"><span class="bf__count-n" data-u="s">00</span><span class="bf__count-l">sec</span></div>'+
-    '</div>'+
-    '<div class="bf__code"><span><span class="bf__code-lab">Il tuo codice</span><span class="bf__code-val">'+s.code+'</span></span><button class="bf__code-btn" type="button">Copia</button></div>'+
-    '<a class="bf__cta" href="'+s.ctaUrl+'">'+s.cta+'</a>'+
-    '</div>';
-  hero.querySelector('.bf__code-btn').addEventListener('click',function(e){var b=e.target;navigator.clipboard.writeText(s.code);b.textContent='Copiato';b.classList.add('is-copied');setTimeout(function(){b.textContent='Copia';b.classList.remove('is-copied');},1500);});
-  startCountdown(ek);
-}
-
-var timer=null;
-function startCountdown(ek){
-  var box=hero.querySelector('.bf__count');if(!box)return;
-  var p=kparts(ek);
-  var end=new Date(p.y+'-'+String(p.m).padStart(2,'0')+'-'+String(p.d).padStart(2,'0')+'T23:59:59+01:00');
-  var simNow=new Date(simDate+'T12:00:00+01:00');var started=Date.now();
-  function tick(){
-    var now=new Date(simNow.getTime()+(Date.now()-started));
-    var diff=Math.max(0,end-now),s=Math.floor(diff/1000);
-    var d=Math.floor(s/86400);s-=d*86400;var h=Math.floor(s/3600);s-=h*3600;var m=Math.floor(s/60);s-=m*60;
-    box.querySelector('[data-u=d]').textContent=d;
-    box.querySelector('[data-u=h]').textContent=String(h).padStart(2,'0');
-    box.querySelector('[data-u=m]').textContent=String(m).padStart(2,'0');
-    box.querySelector('[data-u=s]').textContent=String(s).padStart(2,'0');
-  }
-  tick();if(timer)clearInterval(timer);timer=setInterval(tick,1000);
-}
-
-function openSlot(s){
-  var sk=key(s.start),ek=key(s.end),c=modal.querySelector('.bf__card');
-  c.querySelector('.bf__card-period').textContent=fmtRange(sk,ek);
-  c.querySelector('.bf__card-title').textContent=s.title;
-  c.querySelector('.bf__card-desc').textContent=s.desc;
-  var mi=c.querySelector('.bf__card-img');
-  if(s.img){mi.src=s.img;mi.hidden=false;}else{mi.hidden=true;}
-  c.querySelector('.bf__code').hidden=false;c.querySelector('.bf__code-val').textContent=s.code;
-  var cta=c.querySelector('.bf__cta');cta.href=s.ctaUrl;cta.textContent=s.cta;cta.hidden=false;
-  modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
-}
-modal.querySelector('.bf__close').addEventListener('click',function(){modal.classList.remove('is-open');document.body.style.overflow='';});
-modal.addEventListener('click',function(e){if(e.target===modal){modal.classList.remove('is-open');document.body.style.overflow='';}});
-modal.querySelector('.bf__code-btn').addEventListener('click',function(e){var v=modal.querySelector('.bf__code-val').textContent;navigator.clipboard.writeText(v);e.target.textContent='Copiato';e.target.classList.add('is-copied');setTimeout(function(){e.target.textContent='Copia';e.target.classList.remove('is-copied');},1500);});
-
-document.getElementById('apply').addEventListener('click',function(){simDate=document.getElementById('simDate').value;render();});
-render();
-</script>
+</div>
 </body>
 </html>
